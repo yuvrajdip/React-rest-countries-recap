@@ -1,5 +1,14 @@
 .country{
   border: 2px solid blueviolet;
   border-radius: 10px;
-  padding: 0 2.7rem;
+  padding: 2rem 2.7rem;
+}
+
+.visited{
+  background: bisque;
+  color:black;
+}
+
+.visited h2{
+  color: purple;
 }
