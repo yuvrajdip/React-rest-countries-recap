@@ -6,9 +6,12 @@ import './Country.css'
 const Countries = () => {
 
   const [countries, setCountries] = useState([])
-  const [visitedCountries , setVisitedCountries] = useState([])
+  const [visitedCountries, setVisitedCountries] = useState([])
 
   const handleVisitedCountries = (country) => {
+
+    //todo: states are immutable of useState on React
+    //* visitedCountries is immutable , that's why
     setVisitedCountries([...visitedCountries, country])
   }
 
@@ -21,12 +24,20 @@ const Countries = () => {
   return (
     <div>
       <h3>Countries length: {countries.length} </h3>
-      <h3>Visited Countries : {visitedCountries.length}</h3>
+      
+      {/* Visited countries section */}
+      <div>
+        <h3>Visited Countries : {visitedCountries.length}</h3>
+        <ul>
+
+        </ul>
+      </div>
+
       <div className="countries-container">
         {
           countries.map((country, id) => <Country
             key={id} country={country}
-            handleVisitedCountries={handleVisitedCountries}  
+            handleVisitedCountries={handleVisitedCountries}
           >
           </Country>)
         }

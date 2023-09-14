@@ -14,8 +14,9 @@ const Country = ({ country, handleVisitedCountries }) => {
   }
 
   return (
-    // * Conditional CSS and conditional style
+    // * Conditional CSS class 
     <div className={`country ${visited && 'visited'}`}>
+      {/* conditional style */}
       <h2 style={{ color: visited ? 'red' : 'yellow' }}>Country: {name.common}</h2>
 
       <img height="100px" src={flags.png} alt="" />
